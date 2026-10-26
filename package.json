@@ -1,0 +1,137 @@
+{
+  "name": "bb-plugin-noctis-theme",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Eight Noctis color themes for bb, with matching code and diff palettes.",
+  "keywords": [
+    "bb",
+    "bb-plugin",
+    "theme",
+    "noctis",
+    "dark-mode",
+    "light-mode"
+  ],
+  "license": "MIT",
+  "author": "iamhenry",
+  "homepage": "https://github.com/iamhenry/bb-noctis-theme#readme",
+  "bugs": {
+    "url": "https://github.com/iamhenry/bb-noctis-theme/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iamhenry/bb-noctis-theme.git"
+  },
+  "engines": {
+    "bb": ">=0.47",
+    "bbPluginSdk": ">=0.6.80"
+  },
+  "bb": {
+    "name": "Noctis Themes",
+    "description": "Eight Noctis palettes for bb: five dark, three light, each with matching code and diff colors.",
+    "branding": {
+      "icon": "Palette"
+    },
+    "server": "./server.ts",
+    "skills": [],
+    "themes": [
+      {
+        "id": "noctis",
+        "name": "Noctis",
+        "description": "Deep cold cyan-teal.",
+        "css": "./themes/noctis/theme.css",
+        "codeTheme": {
+          "dark": "./themes/noctis/pierre-dark.json",
+          "light": "./themes/noctis/pierre-light.json"
+        }
+      },
+      {
+        "id": "noctis-azureus",
+        "name": "Noctis Azureus",
+        "description": "Saturated cold azure.",
+        "css": "./themes/noctis-azureus/theme.css",
+        "codeTheme": {
+          "dark": "./themes/noctis-azureus/pierre-dark.json",
+          "light": "./themes/noctis-azureus/pierre-light.json"
+        }
+      },
+      {
+        "id": "noctis-minimus",
+        "name": "Noctis Minimus",
+        "description": "Low-saturation azure.",
+        "css": "./themes/noctis-minimus/theme.css",
+        "codeTheme": {
+          "dark": "./themes/noctis-minimus/pierre-dark.json",
+          "light": "./themes/noctis-minimus/pierre-light.json"
+        }
+      },
+      {
+        "id": "noctis-obscuro",
+        "name": "Noctis Obscuro",
+        "description": "Near-black cold cyan.",
+        "css": "./themes/noctis-obscuro/theme.css",
+        "codeTheme": {
+          "dark": "./themes/noctis-obscuro/pierre-dark.json",
+          "light": "./themes/noctis-obscuro/pierre-light.json"
+        }
+      },
+      {
+        "id": "noctis-sereno",
+        "name": "Noctis Sereno",
+        "description": "Softer cold cyan.",
+        "css": "./themes/noctis-sereno/theme.css",
+        "codeTheme": {
+          "dark": "./themes/noctis-sereno/pierre-dark.json",
+          "light": "./themes/noctis-sereno/pierre-light.json"
+        }
+      },
+      {
+        "id": "noctis-lilac",
+        "name": "Noctis Lilac",
+        "description": "Light cold blue-violet.",
+        "css": "./themes/noctis-lilac/theme.css",
+        "codeTheme": {
+          "dark": "./themes/noctis-lilac/pierre-dark.json",
+          "light": "./themes/noctis-lilac/pierre-light.json"
+        }
+      },
+      {
+        "id": "noctis-lux",
+        "name": "Noctis Lux",
+        "description": "Warm cream light.",
+        "css": "./themes/noctis-lux/theme.css",
+        "codeTheme": {
+          "dark": "./themes/noctis-lux/pierre-dark.json",
+          "light": "./themes/noctis-lux/pierre-light.json"
+        }
+      },
+      {
+        "id": "noctis-hibernus",
+        "name": "Noctis Hibernus",
+        "description": "Cool off-white light.",
+        "css": "./themes/noctis-hibernus/theme.css",
+        "codeTheme": {
+          "dark": "./themes/noctis-hibernus/pierre-dark.json",
+          "light": "./themes/noctis-hibernus/pierre-light.json"
+        }
+      }
+    ]
+  },
+  "files": [
+    "dist/server.js",
+    "dist/server.meta.json",
+    "themes/",
+    "server.ts",
+    "README.md",
+    "LICENSE",
+    "THIRD_PARTY_NOTICES.md"
+  ],
+  "scripts": {
+    "build": "bb plugin build .",
+    "dev": "bb plugin dev ."
+  },
+  "devDependencies": {
+    "@get-bb/plugin-sdk": "0.6.80",
+    "@types/node": "^22.0.0",
+    "typescript": "^5.7.0"
+  }
+}

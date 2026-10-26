@@ -1,10 +1,8 @@
-# bb-noctis-theme
+# Noctis Themes for bb
 
-Eight [Noctis](https://github.com/liviuschera/noctis) color themes ported to
-[bb](https://github.com/get-bb), the agentic IDE.
-
-Each folder is one bb theme: `theme.css` for the app palette, plus matching
-`pierre-dark.json` / `pierre-light.json` for code, diffs, and file previews.
+Eight [Noctis](https://github.com/liviuschera/noctis) color themes for
+[bb](https://github.com/get-bb), packaged as a bb plugin. Five dark, three
+light, each with a matching code, diff, and terminal palette.
 
 ## Screenshots
 
@@ -30,34 +28,33 @@ Each folder is one bb theme: `theme.css` for the app palette, plus matching
 Previews are captured in bb's built-in Gen-UI Gallery on a clean workspace, so
 no session or personal content is shown.
 
-## Themes
-
-| Theme | Look |
-| --- | --- |
-| `noctis` | deep cold cyan-teal, dark |
-| `noctis-azureus` | saturated cold azure, dark |
-| `noctis-minimus` | low-saturation azure, dark |
-| `noctis-obscuro` | near-black cold cyan, dark |
-| `noctis-sereno` | softer cold cyan, dark |
-| `noctis-lilac` | light cold blue-violet |
-| `noctis-lux` | warm cream, light |
-| `noctis-hibernus` | cool off-white, light |
-
 ## Install
 
 ```sh
-git clone https://github.com/iamhenry/bb-noctis-theme
-cp -R bb-noctis-theme/noctis* ~/.bb/theme/
-bb theme set noctis
+bb plugin install git:https://github.com/iamhenry/bb-noctis-theme.git@^0.1.0
+bb theme set plugin:noctis-theme:noctis
 ```
 
-Then switch themes in Settings → Appearance, or with `bb theme set <name>`.
-If your bb data directory is not `~/.bb`, copy the folders into the directory
-printed by `bb theme dir`.
+Then pick any of the eight under **Settings → Appearance**, or by id:
 
-## Notes
+| Theme | Id |
+| --- | --- |
+| Noctis | `plugin:noctis-theme:noctis` |
+| Noctis Azureus | `plugin:noctis-theme:noctis-azureus` |
+| Noctis Minimus | `plugin:noctis-theme:noctis-minimus` |
+| Noctis Obscuro | `plugin:noctis-theme:noctis-obscuro` |
+| Noctis Sereno | `plugin:noctis-theme:noctis-sereno` |
+| Noctis Lilac | `plugin:noctis-theme:noctis-lilac` |
+| Noctis Lux | `plugin:noctis-theme:noctis-lux` |
+| Noctis Hibernus | `plugin:noctis-theme:noctis-hibernus` |
 
-These are tuned ports, not straight palette dumps:
+Update with `bb plugin update noctis-theme`.
+
+## What you get
+
+Each theme ships `theme.css` for the app palette and `pierre-dark.json` /
+`pierre-light.json` for code, diffs, and file previews. They are tuned ports,
+not straight palette dumps:
 
 - **Flat frame** — the icon rail, sidebar, and window chrome share the canvas
   color instead of stacking a darker strip.
@@ -71,7 +68,21 @@ These are tuned ports, not straight palette dumps:
 
 Bordo, UVA, and Viola are not included.
 
+## Development
+
+```sh
+npm install
+bb plugin build .
+bb plugin install . --yes    # local path install, loads server.ts directly
+bb plugin dev .              # rebuild and reload on save
+```
+
+A theme-only plugin still needs the `server.ts` entry: bb only activates the
+manifest's themes from a loaded plugin. See
+[plugin authoring](https://github.com/get-bb/bb) for the manifest contract.
+
 ## License
 
 MIT. The palette is Copyright (c) 2018 Liviu Schera; the bb port is
-Copyright (c) 2026 iamhenry. See [LICENSE](LICENSE).
+Copyright (c) 2026 iamhenry. See [LICENSE](LICENSE) and
+[THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
