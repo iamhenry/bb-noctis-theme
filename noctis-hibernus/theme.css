@@ -1,0 +1,113 @@
+/* bb theme: Noctis Hibernus
+   Ported from liviuschera/noctis themes/hibernus.json.
+   Noctis ships one look per variant, so this palette is mode-independent:
+   the same tokens are set in light and dark. */
+
+:root,
+.light {
+  --canvas: #f4f6f6;
+  --ink: #005661;
+  --primary: #007c8d;
+  --primary-foreground: #ffffff;
+  --timeline-accent: #007c8d;
+  --muted-foreground: #427981;
+  --subtle-foreground: #5a8389;
+  --readback-foreground: #4e7d84;
+  --sidebar: var(--canvas);
+  --sidebar-foreground: #4c787e;
+  --sidebar-accent: #d2e0e1;
+  --sidebar-border: var(--canvas);
+  --border: color-mix(in oklch, var(--ink) 10%, var(--canvas));
+  --border-hairline: color-mix(in oklch, var(--ink) 8%, var(--canvas));
+  --border-seam: var(--canvas);
+  --border-seam-vertical: var(--canvas);
+  --input: #49868e;
+  --surface-recessed: #e1eeef;
+  --surface-recessed-solid: #e1eeef;
+  --surface-raised: #e0eff1;
+  --surface-raised-solid: #e0eff1;
+  --destructive: #ff4000;
+  --destructive-foreground: #000000;
+  --destructive-text: #d33500;
+  --warning: #e69533;
+  --warning-text: #9c6523;
+  --attention: #e69533;
+  --success: #00824c;
+  --diff-added: #009456;
+  --diff-removed: #ff4000;
+  --surface-selected: #d2e0e1;
+  --surface-selected-border: #abc6c9;
+  --pr-merged: #ff5792;
+  --file-accent: #007c8d;
+}
+
+.dark {
+  --canvas: #f4f6f6;
+  --ink: #005661;
+  --primary: #007c8d;
+  --primary-foreground: #ffffff;
+  --timeline-accent: #007c8d;
+  --muted-foreground: #427981;
+  --subtle-foreground: #5a8389;
+  --readback-foreground: #4e7d84;
+  --sidebar: var(--canvas);
+  --sidebar-foreground: #4c787e;
+  --sidebar-accent: #d2e0e1;
+  --sidebar-border: var(--canvas);
+  --border: color-mix(in oklch, var(--ink) 10%, var(--canvas));
+  --border-hairline: color-mix(in oklch, var(--ink) 8%, var(--canvas));
+  --border-seam: var(--canvas);
+  --border-seam-vertical: var(--canvas);
+  --input: #49868e;
+  --surface-recessed: #e1eeef;
+  --surface-recessed-solid: #e1eeef;
+  --surface-raised: #e0eff1;
+  --surface-raised-solid: #e0eff1;
+  --destructive: #ff4000;
+  --destructive-foreground: #000000;
+  --destructive-text: #d33500;
+  --warning: #e69533;
+  --warning-text: #9c6523;
+  --attention: #e69533;
+  --success: #00824c;
+  --diff-added: #009456;
+  --diff-removed: #ff4000;
+  --surface-selected: #d2e0e1;
+  --surface-selected-border: #abc6c9;
+  --pr-merged: #ff5792;
+  --file-accent: #007c8d;
+}
+
+/* Terminal ANSI palette — Noctis terminal.ansi* */
+:root,
+.light {
+  --ansi-0: #003b42;   --ansi-bg-fg-0: #f4f6f6;
+  --ansi-1: #e34e1c;   --ansi-bg-fg-1: #f4f6f6;
+  --ansi-2: #00b368;   --ansi-bg-fg-2: #005661;
+  --ansi-3: #f49725;   --ansi-bg-fg-3: #005661;
+  --ansi-4: #0094f0;   --ansi-bg-fg-4: #f4f6f6;
+  --ansi-5: #ff5792;   --ansi-bg-fg-5: #005661;
+  --ansi-6: #00bdd6;   --ansi-bg-fg-6: #005661;
+  --ansi-7: #8ca6a6;   --ansi-bg-fg-7: #005661;
+  --ansi-8: #004d57;   --ansi-bg-fg-8: #f4f6f6;
+  --ansi-9: #ff4000;   --ansi-bg-fg-9: #f4f6f6;
+  --ansi-10: #00d17a;   --ansi-bg-fg-10: #005661;
+  --ansi-11: #ff8c00;   --ansi-bg-fg-11: #005661;
+  --ansi-12: #0fa3ff;   --ansi-bg-fg-12: #005661;
+  --ansi-13: #ff6b9f;   --ansi-bg-fg-13: #005661;
+  --ansi-14: #00cbe6;   --ansi-bg-fg-14: #005661;
+  --ansi-15: #bbc3c4;   --ansi-bg-fg-15: #005661;
+}
+
+/* Flat frame — the icon rail is painted with surface-recessed; pin it to the
+   canvas so the rail, sidebar, and thread share one background. */
+nav.bg-surface-recessed {
+  background-color: var(--canvas);
+}
+
+/* Flat frame — the framed desktop shell washes the window chrome in
+   surface-recessed; drop the wash so the title bar and lips match the canvas. */
+[data-framed] {
+  background-image: none;
+  background-color: var(--canvas);
+}
