@@ -6,6 +6,30 @@ Eight [Noctis](https://github.com/liviuschera/noctis) color themes ported to
 Each folder is one bb theme: `theme.css` for the app palette, plus matching
 `pierre-dark.json` / `pierre-light.json` for code, diffs, and file previews.
 
+## Screenshots
+
+<table>
+  <tr>
+    <td align="center"><img src="screenshots/noctis.jpg" width="430" alt="Noctis"><br><sub><b>noctis</b> · dark</sub></td>
+    <td align="center"><img src="screenshots/noctis-azureus.jpg" width="430" alt="Noctis Azureus"><br><sub><b>noctis-azureus</b> · dark</sub></td>
+  </tr>
+  <tr>
+    <td align="center"><img src="screenshots/noctis-minimus.jpg" width="430" alt="Noctis Minimus"><br><sub><b>noctis-minimus</b> · dark</sub></td>
+    <td align="center"><img src="screenshots/noctis-obscuro.jpg" width="430" alt="Noctis Obscuro"><br><sub><b>noctis-obscuro</b> · dark</sub></td>
+  </tr>
+  <tr>
+    <td align="center"><img src="screenshots/noctis-sereno.jpg" width="430" alt="Noctis Sereno"><br><sub><b>noctis-sereno</b> · dark</sub></td>
+    <td align="center"><img src="screenshots/noctis-lilac.jpg" width="430" alt="Noctis Lilac"><br><sub><b>noctis-lilac</b> · light</sub></td>
+  </tr>
+  <tr>
+    <td align="center"><img src="screenshots/noctis-lux.jpg" width="430" alt="Noctis Lux"><br><sub><b>noctis-lux</b> · light</sub></td>
+    <td align="center"><img src="screenshots/noctis-hibernus.jpg" width="430" alt="Noctis Hibernus"><br><sub><b>noctis-hibernus</b> · light</sub></td>
+  </tr>
+</table>
+
+Previews are captured in bb's built-in Gen-UI Gallery on a clean workspace, so
+no session or personal content is shown.
+
 ## Themes
 
 | Theme | Look |
